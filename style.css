@@ -1,0 +1,96 @@
+body {
+ background-color:  #ccf5ff;
+}
+
+h1 {
+  font-family: 'Special Elite', cursive;
+  color: #00b8e6;
+}
+p {
+  font-family: 'Special Elite', cursive;
+  color: #00b8e6;
+  font-size: 26px;
+}
+
+.total {
+  /*font-family: 'Special Elite', cursive;*/
+  color: #00b8e6;
+  font-size: 22px;
+}
+img {
+  margin-bottom: 30px;
+  border: 10px solid white;
+}
+.box{
+  background-color: white;
+  height: 250px;
+  width: 500px;
+  border: 5px solid navy;
+  margin: auto;
+}
+
+.container {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+
+  -webkit-flex-flow: row wrap;
+  justify-content: space-around;
+}
+
+label {
+  color: #00b8e6;
+  font-weight: bold;
+  font-size: 22px;
+  margin-right: 20px;
+}
+
+input {
+  color: navy;
+  font-size: 16px;
+  border-color: navy;
+  height: 30px;
+  width: 150px;
+}
+
+#name {
+  color: navy;
+  font-size: 16px;
+  border-color: navy;
+  height: 30px;
+  width: 400px;
+}
+
+#start {
+  text-align: center;
+  height: 30px;
+  width: 200px;
+  background-color: navy;
+  font-size: 16px;
+  color: #ccfff5;
+  border-radius: 5px;
+}
+
+tbody {
+}
+th.make {
+  color: green;
+  text-align: center
+
+}
+
+.make {
+  color: navy;
+}
+.name {
+  color: navy;
+}
+
+.selected {
+  color: red;
+}

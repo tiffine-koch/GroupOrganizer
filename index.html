@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Group Organizer</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Super Fun SoftBall League Sign Up App</h1>
+  <img src="sandlot.jpg" alt="">
+
+  <div class="container">
+    <label for="name">Enter Player Name</label>
+    <input id="name" class="touch" type="text" placeholder="future mvp">
+    <label for="position">Position Desired</label>
+    <input id="position" type="number" placeholder="positions 1 - 9">
+    <label for="">Enter Skill Level</label>
+    <input id="skill" type="number" placeholder="level 1 -5">
+    <button id="start">Batter Up!</button>
+  </div>
+
+<div class="bigContainer" id="reallyBig">
+
+  <div class="container">
+    <p>Team 1</p>
+    <p>Team 2</p>
+  </div>
+
+  <div class="container">
+    <div class="box">
+      <button id="here" class="delete">X</button>
+      <div id="total1" class="total team"></div>
+      <div class="table">
+        <table>
+          <thead id="tHeader">
+            <tr>
+              <th class="name make">Name</th>
+              <th class="position make">Pos.</th>
+              <th class="skill make">Skill</th>
+            </tr>
+          </thead>
+
+          <tbody id="team1List">
+            <tr id="template">
+              <td class="name make"></td>
+              <td class="position make"></td>
+              <td class="skill make"></td>
+            </tr>
+          </tbody>
+        </table>
+        </div>
+      </div>
+
+    <div class="box">
+      <button class="delete">X</button>
+      <div class="total team"></div>
+      <div class="table">
+        <table>
+          <thead id="tHeader">
+            <tr>
+              <th class="name make">Name</th>
+              <th class="position make">Pos.</th>
+              <th class="skill make">Skill</th>
+            </tr>
+          </thead>
+          <tbody id="table2">
+
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <p>Team 3</p>
+    <p>Team 4</p>
+  </div>
+
+  <div class="container">
+    <div class="box">
+      <button class="delete">X</button>
+      <div class="total team"></div>
+      <div class="table">
+        <table>
+          <thead id="tHeader">
+            <tr>
+              <th class="name make">Name</th>
+              <th class="position make">Pos.</th>
+              <th class="skill make">Skill</th>
+            </tr>
+          </thead>
+          <tbody>
+
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div class="box">
+      <button class="delete">X</button>
+      <div class="total team"></div>
+      <div class="table">
+        <table>
+          <thead id="tHeader">
+            <tr>
+              <th class="name make">Name</th>
+              <th class="position make">Pos.</th>
+              <th class="skill make">Skill</th>
+            </tr>
+          </thead>
+          <tbody>
+
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+  <script src="https://code.jquery.com/jquery-2.2.1.min.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>
