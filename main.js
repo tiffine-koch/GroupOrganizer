@@ -2,18 +2,17 @@
 
 $(document).ready(init);
 
-var team1 = [], team2 = [], team3 = [], team4 = [];
-var count = 0;
+var team1 = [], team2 = [], team3 = [], team4 = [], total = [];
+var count = 0, player;
 
 function init() {
   console.log('readddddy');
   $('#start').on('click', getInfo);
   $('tbody').on('click', clickName);
-  $('#reallyBig').on('click', '.box', clickHolder);
+  // $('#reallyBig').on('click', '.box', clickHolder);
 }
 
 function getInfo() {
-
   var name = $('#name').val();
   var position = $('#position').val();
   var skill = $('#skill').val();
@@ -24,9 +23,13 @@ function getInfo() {
   "position": position,
   "skill": skill,
   }
-  //
-  // var $name = $('<div>').addClass('name');
-  // console.log('player', player);
+
+  // count = ++count;
+  console.log("count", count);
+  // $('#totalNumber').detach();
+  var $showTotal = $('<div>').text(count++);
+  $('#totalNumber').append($showTotal);
+
   console.log("player:", player);
   team1.push(player);
 
@@ -37,36 +40,29 @@ function getInfo() {
    $tr.children('.skill').text(skill);
 
    console.log("team1:", team1);
-  $('#team1List').prepend($tr);
+  $('#teamAllList').prepend($tr);
 }
 
 function clickName(event) {
-  // $(this).closest('tr').css("color","red");
-  var $this = $(this).closest('tr').addClass("name");
-  console.log("change", $this);
-  // $('.selected').appendTo($this);
-  // $('.selected').removeClass('selected');
-  var wasSelected = $this.hasClass('selected');
-  $('box').removeClass('selected');
-
-  if(!wasSelected) {
-    $this.addClass('selected');
-  }
-}
-
-function clickHolder() {
   event.stopPropagation();
+
   console.log("working");
-  var $this = $(this).closest('tr');
-  console.log("working", $this);
-  // var $destination = $this.parent().siblings();
-  // var $box = $(this).detach();
-  $('#table2').append($this);
-  // $destination.append($box);
+  $(".make").click(function () {
+  var row = $(this).closest("tr").addClass("selected");
+
+  var table = $(this).closest("table");
+    console.log("working holder", table);
+
+    row.detach();
+
+    if (table.is("#tableHome")) {
+        $("#table1").append(row);
+        // $(this).closest("table").append(row);
+    }  else {
+        $("#table1").append(row);
+    }
+
+    // $("#table1").append(row);
+    console.log("clickedPlayer");
+  });
 }
-// for(var i = 0; i < player; i++) {
-//   var total = ++count;
-//   console.log(total);
-//   console.log('inside', i);
-//   $('#total1').text("Total = " + total);
-// }
